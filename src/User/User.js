@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 //import the css file
 import './User.css';
 import UserInfo from './UserInfo'
+import UserMenu from './UserMenu'
 
 //Create a component
 const User = (props) => {
@@ -44,6 +45,10 @@ const User = (props) => {
                 userName={userState.user.name} 
                 userEmail={userState.user.email}
             />
+            <UserMenu 
+                userName={userState.user.name}
+            />
+            
         </div>
     );
 }
