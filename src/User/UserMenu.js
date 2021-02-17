@@ -11,37 +11,46 @@ const UserMenu = (props) => {
     const [menuState, setMenuState] = useState({   
         task: {
             taskList: [],
+            newTask: ""
         },
-        taskValue: ""
     });
 
-    //Set a task value
     const setTask = (newTask) => {
+        //Check if there is any input
+        if(newTask.trim().length > 0){
+            
+            //copy the taskset to a new one to be edit
+            var newTaskSet = [...menuState.task.taskList]
+
+            //Update the latest Task
+            setMenuState({
+                task: {
+                    taskList: newTaskSet,
+                    newTask: newTask.trim()
+                },
+            })
+            
+        }
+    }
+
+    //add the new task
+    const addTask = () => {
+        
+        //copy the taskset to a new one to be edit
+        var newTaskSet = [...menuState.task.taskList]
+
+        //Edit the list by adding
+        newTaskSet.push(menuState.task.newTask)
 
         //Update the latest Task
         setMenuState({
-            task: {...menuState},
-            taskValue: newTask
+            task: {
+                taskList: newTaskSet,
+            },
         })
+
+        console.log(menuState)
     }
-
-            // //Copy the old value
-        // var oldStateValues = {...menuState};
-
-
-        
-        // //Create temporary list
-        // var tempTaskList = [];
-        
-        // //Push to the list the value
-        // tempTaskList.push(taskValue)
-
-        // //update the state
-        // setMenuState({
-        //     task: {
-        //         taskList: tempTaskList,
-        //     },
-        // })
 
     return (
         <div class="UserInfo">
@@ -51,7 +60,7 @@ const UserMenu = (props) => {
                 <br/>
                 <input type="text" placeholder="Task" name="taskName" onChange={event => setTask(event.target.value)}></input>
                 <br/>
-                <button>Enter Task</button>
+                <button onClick={addTask}>Enter Task</button>
         </div>
     );
 }
