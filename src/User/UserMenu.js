@@ -29,7 +29,6 @@ const UserMenu = (props) => {
                     newTask: newTask.trim()
                 },
             })
-            
         }
     }
 
