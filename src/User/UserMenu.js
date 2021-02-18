@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 //import the css file
 import './User.css';
 
+//import the task list component
+import TaskList from './TaskList.js'
+
 //Create a component
 const UserMenu = (props) => {
 
@@ -62,12 +65,9 @@ const UserMenu = (props) => {
                 <input type="text" placeholder="Task" name="taskName" onChange={event => setTask(event.target.value)}></input>
                 <br/>
                 <button onClick={addTask}>Enter Task</button>
-            {menuState.task.taskList.map((task, index) => {
-            <div>
-                
-            </div>
-            })
-            }
+                <TaskList 
+                    taskList={menuState.task.taskList}
+                />
         </div>
         
     );
