@@ -62,11 +62,12 @@ const UserMenu = (props) => {
                 <input type="text" placeholder="Task" name="taskName" onChange={event => setTask(event.target.value)}></input>
                 <br/>
                 <button onClick={addTask}>Enter Task</button>
-            {menuState.task.taskList.map(task, index) => {
-                            <div>
+            {menuState.task.taskList.map((task, index) => {
+            <div>
                 
-                            </div>
-            }}
+            </div>
+            })
+            }
         </div>
         
     );
