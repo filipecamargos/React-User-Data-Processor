@@ -64,7 +64,7 @@ const UserMenu = (props) => {
                 <br/>
                 <button onClick={addTask}>Enter Task</button>
                 <TaskList 
-                    taskList={menuState.task.taskList}
+                    task={menuState}
                 />
         </div>
         
