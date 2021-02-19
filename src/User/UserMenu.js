@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import './User.css';
 
 //import the task list component
-import TaskList from './TaskList.js'
+import TaskList from '../Task/TaskList.js'
 
 //Create a component
 const UserMenu = (props) => {

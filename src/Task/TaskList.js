@@ -1,7 +1,5 @@
 //Make sure to import React so you can use it
 import React from 'react'
-//import the css file
-import './User.css';
 
 
 //Create a component
