@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 //import the css file
 import './User.css';
 import UserInfo from './UserInfo'
-import UserMenu from './UserMenu'
+import UserMenu from './UserTaskPainel'
 
 //Create a component
 const User = (props) => {
