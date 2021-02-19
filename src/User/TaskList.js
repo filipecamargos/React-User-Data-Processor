@@ -11,8 +11,9 @@ const TaskList = (props) => {
     return (
         <div>
             {listOfTask.map((task, index) => {
+                {console.log(task)}
                 <div>
-                    <li>Hello</li>
+                    <li>{task}</li>
                 </div>
             })
             }

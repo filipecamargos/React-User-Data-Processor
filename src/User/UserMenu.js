@@ -52,8 +52,6 @@ const UserMenu = (props) => {
                 taskList: newTaskSet,
             },
         })
-
-        console.log(menuState)
     }
 
     return (
