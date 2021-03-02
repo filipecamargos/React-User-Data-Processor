@@ -1,5 +1,6 @@
 //Make sure to import React so you can use it
 import React from 'react'
+//Import CSS modules
 
 
 //Create a component
