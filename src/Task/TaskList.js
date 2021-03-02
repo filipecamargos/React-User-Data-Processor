@@ -1,6 +1,7 @@
 //Make sure to import React so you can use it
 import React from 'react'
 //Import CSS modules
+import cssClasses from './TaskList.css'
 
 
 //Create a component
@@ -18,7 +19,7 @@ const TaskList = (props) => {
             <div>
                 {props.task.task.taskList.map((task, index) => {
                     return (
-                        <div>
+                        <div className={cssClasses.TaskList}>
                                 <li>{task}</li>
                             
                         </div>
